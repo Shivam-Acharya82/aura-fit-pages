@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA-FIT Account Deletion</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef7ff;
+      --card: #ffffff;
+      --text: #152033;
+      --muted: #5f6f86;
+      --blue: #0b57d0;
+      --gold: #d5a32a;
+      --danger: #dc2626;
+      --line: #dbe7f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff7d6 0%, var(--bg) 260px);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .hero,
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(11, 87, 208, 0.08);
+    }
+
+    .hero {
+      padding: 34px;
+      margin-bottom: 18px;
+      border-top: 6px solid var(--gold);
+    }
+
+    section {
+      padding: 28px;
+      margin: 18px 0;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(32px, 6vw, 54px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 16px 0 8px;
+      font-size: 18px;
+    }
+
+    p { margin: 10px 0; }
+
+    ol,
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li { margin: 8px 0; }
+
+    .updated {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #eaf3ff;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .warning {
+      padding: 14px 16px;
+      border-left: 4px solid var(--danger);
+      background: #fff1f2;
+      border-radius: 12px;
+      color: #7f1d1d;
+      font-weight: 700;
+    }
+
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--gold);
+      background: #fff9e7;
+      border-radius: 12px;
+      color: #4d3b0b;
+    }
+
+    a { color: var(--blue); font-weight: 700; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 0 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <h1>AURA-FIT Account Deletion</h1>
+      <p class="updated">Last updated: May 24, 2026</p>
+      <p>
+        This page explains how AURA-FIT users can deactivate their account temporarily
+        or permanently delete their account and associated app data.
+      </p>
+      <span class="pill">User-controlled account removal</span>
+    </div>
+
+    <section>
+      <h2>Delete Your Account Inside the App</h2>
+      <p>You can delete your account directly inside AURA-FIT:</p>
+      <ol>
+        <li>Open the AURA-FIT app.</li>
+        <li>Sign in to the account you want to delete.</li>
+        <li>Go to <strong>Profile</strong>.</li>
+        <li>Open <strong>Settings</strong> or <strong>Account &amp; Security</strong>.</li>
+        <li>Tap <strong>Delete Account</strong> or <strong>Deactivate Account</strong>.</li>
+        <li>Choose either temporary deactivation or permanent deletion.</li>
+        <li>Confirm your choice in the warning dialog.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Temporary Deactivation</h2>
+      <p>
+        If you choose temporary deactivation, your account is disabled for login until
+        you reactivate it. Your cloud data is kept safely so it can be restored when
+        you reactivate your account.
+      </p>
+      <p>Temporary deactivation may keep:</p>
+      <ul>
+        <li>Profile data</li>
+        <li>Workout progress and logs</li>
+        <li>Memories and progress photo URLs</li>
+        <li>Premium status records</li>
+        <li>Settings and app preferences</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permanent Deletion</h2>
+      <p class="warning">
+        Permanent deletion removes your account and associated AURA-FIT cloud data.
+        This action cannot be undone.
+      </p>
+      <p>Permanent deletion is designed to remove:</p>
+      <ul>
+        <li>Firebase Authentication account</li>
+        <li>Firestore profile data</li>
+        <li>Workout progress, workout logs, and activity logs</li>
+        <li>Premium/subscription status records stored by the app</li>
+        <li>Memory records and Cloudinary image URLs stored in Firestore</li>
+        <li>Settings, analytics, challenge data, body stats, and app preferences</li>
+      </ul>
+      <p class="note">
+        AURA-FIT stores image files in Cloudinary and stores the returned image URLs in Firestore.
+        The app removes the cloud data and image references associated with your account. If you
+        need support removing externally hosted image assets, contact support using the email below.
+      </p>
+    </section>
+
+    <section>
+      <h2>Request Deletion by Email</h2>
+      <p>
+        If you cannot access the app, you may request account deletion by email.
+        Send a request from the email address linked to your AURA-FIT account.
+      </p>
+      <p>
+        Contact: <strong>shivamacharya82@gmail.com</strong>
+      </p>
+      <p>Please include:</p>
+      <ul>
+        <li>Your AURA-FIT account email address</li>
+        <li>Your request: temporary deactivation or permanent deletion</li>
+        <li>Any extra details needed to identify your account</li>
+      </ul>
+     
+    </section>
+
+    <section>
+      <h2>Deletion Timeline</h2>
+      <p>
+        In-app deletion starts immediately after confirmation. Email deletion requests
+        are reviewed and processed as soon as reasonably possible after account ownership
+        is verified.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy Policy</h2>
+      <p>
+        For more information about what data AURA-FIT collects and how it is used, read:
+        <a href="./privacy-policy.html">AURA-FIT Privacy Policy</a>.
+      </p>
+    </section>
+
+    <footer>
+      AURA-FIT Account Deletion
+    </footer>
+  </main>
+</body>
+</html>
